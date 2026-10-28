@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11102c">
+<title>Bayli AI — Think. Build. Verify. Deploy.</title>
+<style>
+:root{--line:#a78bfa45;--muted:#c5c1df;--text:#f7f4ff}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 20% 0%,#33235f,transparent 45%),radial-gradient(ellipse at 90% 45%,#173451,transparent 42%),#0b0b20}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 12% 30%,#fff9 50%,transparent),radial-gradient(1px 1px at 65% 17%,#fff9 50%,transparent),radial-gradient(1px 1px at 80% 80%,#fff8 50%,transparent),radial-gradient(2px 2px at 42% 70%,#b9c7ffb0 50%,transparent);background-size:320px 270px;z-index:-1}
+.wrap{max-width:1100px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{display:flex;gap:10px;align-items:center;font-weight:800}.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#ddd6fe,#60a5fa);color:#17132f;font-size:26px}.pill,.tag{border:1px solid var(--line);border-radius:99px;padding:7px 11px;color:#d8ccff;font-size:12px}
+.hero{text-align:center;max-width:780px;margin:64px auto 42px}.biglogo{width:110px;height:110px;margin:0 auto 24px;border-radius:34px;display:grid;place-items:center;font-size:70px;font-weight:900;color:#17132f;background:linear-gradient(135deg,#ddd6fe,#a78bfa,#60a5fa);box-shadow:0 0 65px #8b5cf64a;animation:float 5s ease-in-out infinite}@keyframes float{50%{transform:translateY(-7px)}}
+h1{font-size:clamp(38px,7vw,66px);line-height:1.04;letter-spacing:-.05em;margin:0 0 16px}.grad{background:linear-gradient(90deg,#e9d5ff,#a5b4fc,#7dd3fc);color:transparent;background-clip:text}.claim{color:#c4b5fd;letter-spacing:.16em;text-transform:uppercase}.intro{color:var(--muted);line-height:1.8}.btn{padding:12px 17px;border-radius:13px;border:1px solid var(--line);background:#ffffff09;color:#fff;font-weight:650;cursor:pointer}.primary{background:linear-gradient(100deg,#a78bfa,#818cf8);color:#11102c;border:0}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}.tiny{color:#9893b9;font-size:12px;margin-top:14px}
+.head{margin:34px 0 16px}.head p,.card p{color:var(--muted);font-size:13px;line-height:1.6}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{padding:21px;text-align:left;border:1px solid var(--line);border-radius:20px;background:#1b1b3bd9;color:white;cursor:pointer;min-height:150px;transition:.2s}.card:hover{border-color:#c4b5fd;transform:translateY(-2px)}.icon{font-size:26px}.card h3{margin:12px 0 6px}.tag{display:inline-block;margin-top:9px;font-size:10px}.panel{display:none;margin-top:18px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#191832ee}.panel.show{display:block}.field{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:#0d0d22;color:white;margin:10px 0}.response{white-space:pre-wrap;color:#ddd6fe;margin-top:12px}.foot{text-align:center;color:#8f8aac;font-size:12px;padding:36px 0}button:focus-visible{outline:2px solid #7dd3fc;outline-offset:3px}
+@media(max-width:720px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{margin-top:45px}}@media(max-width:460px){.wrap{padding:16px}.grid{grid-template-columns:1fr}.biglogo{width:90px;height:90px;font-size:58px}.pill{font-size:10px}}
+</style></head>
+<body><div class="wrap">
+<header class="top"><div class="brand"><span class="logo">B</span><span>Bayli AI</span></div><span class="pill">✦ Dein KI-Arbeitsraum</span></header>
+<main>
+<section class="hero" id="welcome"><div class="biglogo">B</div><h1>Willkommen bei <span class="grad">Bayli AI</span></h1><p class="claim">Think. Build. Verify. Deploy.</p>
+<p class="intro">Eine neue Art, Wissen zu entdecken, Probleme zu lösen, Ideen in Wirklichkeit werden zu lassen und den Alltagsstress etwas zu minimieren.</p>
+<div class="actions"><button class="btn primary" id="guest">Als Gast fortfahren ↗</button><button class="btn" id="discover">Bayli entdecken</button></div><p class="tiny">Erster Prototyp · Noch keine Anmeldung oder externe KI verbunden</p></section>
+<section id="app" hidden><div class="head"><h2>Dein Arbeitsraum</h2><p>Wähle aus, womit du anfangen möchtest.</p></div><div class="grid">
+<button class="card" data-id="chat"><span class="icon">✧</span><h3>Neuer Chat</h3><p>Fragen klären und Ideen weiterentwickeln.</p><span class="tag">Gespräch</span></button>
+<button class="card" data-id="projects"><span class="icon">◈</span><h3>Neue Projekte</h3><p>Eine Idee in nächste Schritte verwandeln.</p><span class="tag">Planung</span></button>
+<button class="card" data-id="code"><span class="icon">⌘</span><h3>Code erstellen</h3><p>Code entwerfen und später testen.</p><span class="tag">Workspace</span></button>
+<button class="card" data-id="research"><span class="icon">⌕</span><h3>Recherche</h3><p>Fragen für spätere Quellenrecherche sammeln.</p><span class="tag">Wissen</span></button>
+<button class="card" data-id="knowledge"><span class="icon">▤</span><h3>Wissensbasis</h3><p>Notizen und Erkenntnisse sammeln.</p><span class="tag">Sammlung</span></button>
+<button class="card" data-id="cosmos"><span class="icon">☼</span><h3>Cosmos</h3><p>Ein Überblick über unser Sonnensystem.</p><span class="tag">Experimentell</span></button>
+<button class="card" data-id="history"><span class="icon">◷</span><h3>Verlauf</h3><p>Aktionen in dieser Sitzung ansehen.</p><span class="tag">Sitzung</span></button>
+<button class="card" data-id="files"><span class="icon">▧</span><h3>Erstellte Dateien</h3><p>Bereich für künftige Dateien und Downloads.</p><span class="tag">Geplant</span></button>
+<button class="card" data-id="settings"><span class="icon">⚙</span><h3>Einstellungen</h3><p>Integrationen später einrichten.</p><span class="tag">Prototyp</span></button>
+</div><section class="panel" id="panel"><h2 id="title"></h2><p id="desc"></p><div id="content"></div></section></section>
+</main><footer class="foot">Bayli AI · Prototyp · Keine Anmeldung, KI-API oder Cloud-Speicherung eingerichtet</footer></div>
+<script>
+const $=s=>document.querySelector(s),events=[];
+function log(s){events.unshift(new Date().toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})+' — '+s)}
+function enter(){$('#welcome').hidden=true;$('#app').hidden=false;log('Arbeitsraum geöffnet');window.scrollTo({top:0,behavior:'smooth'})}
+$('#guest').onclick=enter;$('#discover').onclick=()=>{enter();open('chat')};
+const cfg={
+chat:['Neuer Chat','Eine echte KI ist noch nicht verbunden. Halte hier eine Gesprächsnotiz fest.','Frage oder Notiz'],
+projects:['Neue Projekte','Notiere eine Projektidee für diese Sitzung.','Projektidee'],
+code:['Code-Workspace','Ein Entwurfsbereich. Der Code wird noch nicht ausgeführt.','Code oder Idee'],
+research:['Recherche','Webrecherche und Quellenprüfung sind noch nicht verbunden.','Was möchtest du herausfinden?'],
+knowledge:['Wissensbasis','Notizen bleiben nur während dieser Sitzung erhalten.','Wichtige Notiz'],
+cosmos:['Cosmos','Ein erster Überblick über die acht Planeten.',''],
+history:['Verlauf','Aktionen in dieser Sitzung.',''],
+files:['Erstellte Dateien','Dateiverwaltung und Downloads sind noch nicht integriert.',''],
+settings:['Einstellungen','KI-Verbindung: nicht eingerichtet. Anmeldung und Cloud-Speicherung sind noch nicht verbunden.','']};
+function open(id){let c=cfg[id];$('#panel').classList.add('show');$('#title').textContent=c[0];$('#desc').textContent=c[1];let box=$('#content');box.innerHTML='';
+if(['chat','projects','code','research','knowledge'].includes(id)){let input=document.createElement(id==='code'||id==='knowledge'?'textarea':'input');input.className='field';input.placeholder=c[2];if(input.tagName==='TEXTAREA')input.rows=5;let btn=document.createElement('button');btn.className='btn primary';btn.textContent='Für diese Sitzung speichern';let out=document.createElement('div');out.className='response';btn.onclick=()=>{if(!input.value.trim()){out.textContent='Bitte zuerst etwas eingeben.';return}log(c[0]+' gespeichert');out.textContent='Vorläufig notiert: '+input.value.trim()};box.append(input,btn,out)}
+if(id==='cosmos')box.innerHTML='<div class="grid">'+[['☿','Merkur'],['♀','Venus'],['🌍','Erde'],['♂','Mars'],['♃','Jupiter'],['♄','Saturn'],['♅','Uranus'],['♆','Neptun']].map(x=>'<div class="card"><span class="icon">'+x[0]+'</span><h3>'+x[1]+'</h3></div>').join('');
+if(id==='history')box.textContent=events.join('\\n')||'Noch keine Aktionen.';
+if(id==='files')box.textContent='Geplant: Vorschau, Download und Sortierung nach Projekt.';
+if(id==='settings')box.textContent='Prototyp. Bitte keine Zugangsdaten oder API-Schlüssel hier hinterlegen.';
+log(c[0]+' geöffnet');$('#panel').scrollIntoView({behavior:'smooth',block:'nearest'})}
+document.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>open(b.dataset.id));
+</script></body></html>
